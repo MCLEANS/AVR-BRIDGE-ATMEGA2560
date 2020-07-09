@@ -16,6 +16,14 @@ void GPIO::set_high( uint8_t* PORT_REGISTER, uint8_t PIN){
     PORT_REGISTER |= (1 << PIN);
 }
 
+void GPIO::set_low( uint8_t* PORT_REGISTER, uint8_t PIN){
+    PORT_REGISTER &= ~(1 << PIN);
+}
+
+void GPIO::toggle_pin( uint8_t* PORT_REGISTER, uint8_t PIN){
+    PORT_REGISTER ^= (1 << PIN);
+}
+
 GPIO::~GPIO(){
 
 }
