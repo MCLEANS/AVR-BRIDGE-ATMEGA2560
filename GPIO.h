@@ -9,11 +9,11 @@ class GPIO{
     public:
     public:
         GPIO();
-        void set_input(uint8_t* DIRECTION_REGISTER, uint8_t PIN);
-        void set_output(uint8_t* DIRECTION_REGISTER, uint8_t PIN);
-        void set_high(uint8_t* PORT_REGISTER, uint8_t PIN);
-        void set_low(uint8_t* PORT_REGISTER, uint8_t PIN);
-        void toggle_pin(uint8_t* PORT_REGISTER, uint8_t PIN);
+        void set_input(volatile uint8_t* DIRECTION_REGISTER, uint8_t PIN);
+        void set_output(volatile uint8_t* DIRECTION_REGISTER, uint8_t PIN);
+        void set_high(volatile uint8_t* PORT_REGISTER, uint8_t PIN);
+        void set_low(volatile uint8_t* PORT_REGISTER, uint8_t PIN);
+        void toggle_pin(volatile uint8_t* PORT_REGISTER, uint8_t PIN);
         ~GPIO();
 };
 
