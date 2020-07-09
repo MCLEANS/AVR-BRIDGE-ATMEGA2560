@@ -176,6 +176,54 @@ void listen(){
 			uart.flush_buffer();
 		
 		}
+		else if(strncmp(uart.receive_buffer,PINA0_INPUT,(sizeof(PINA0_INPUT)/sizeof(char))-1) == 0){
+			gpio.set_input(DDRA,PIN0);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PINA1_INPUT,(sizeof(PINA1_INPUT)/sizeof(char))-1) == 0){
+			gpio.set_input(DDRA,PIN1);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PINA2_INPUT,(sizeof(PINA2_INPUT)/sizeof(char))-1) == 0){
+			gpio.set_input(DDRA,PIN2);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PINA3_INPUT,(sizeof(PINA3_INPUT)/sizeof(char))-1) == 0){
+			gpio.set_input(DDRA,PIN3);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PINA4_INPUT,(sizeof(PINA4_INPUT)/sizeof(char))-1) == 0){
+			gpio.set_input(DDRA,PIN4);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PINA5_INPUT,(sizeof(PINA5_INPUT)/sizeof(char))-1) == 0){
+			gpio.set_input(DDRA,PIN5);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PINA6_INPUT,(sizeof(PINA6_INPUT)/sizeof(char))-1) == 0){
+			gpio.set_input(DDRA,PIN6);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PINA7_INPUT,(sizeof(PINA7_INPUT)/sizeof(char))-1) == 0){
+			gpio.set_input(DDRA,PIN7);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
 		else{
 			uart.flush_buffer();
 		}
@@ -190,9 +238,7 @@ int main(void)
 {
 	uart.init(9600);
 	adc.init();
-	gpio.set_output(&DDRB,PIN7);
-	gpio.set_low(&PORTB,PIN7);
-	
+
 	while (1) {
 		listen();
     }
