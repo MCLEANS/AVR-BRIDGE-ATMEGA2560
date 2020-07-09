@@ -7,10 +7,12 @@
 #include "UART.h"
 #include "ADC.h"
 #include "commands.h"
+#include "GPIO.h"
 
 //Peripheral objects
 UART uart;
 _ADC adc;
+GPIO gpio;
 
 ADC_channel_value adc_values;
 
@@ -188,6 +190,8 @@ int main(void)
 {
 	uart.init(9600);
 	adc.init();
+	gpio.set_output(&DDRB,PIN7);
+	gpio.set_low(&PORTB,PIN7);
 	
 	while (1) {
 		listen();
