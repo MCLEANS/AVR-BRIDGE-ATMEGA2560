@@ -371,8 +371,8 @@ void listen(){
 			uart.send_char(new_line);
 			uart.flush_buffer();
 		}
-		
-		/*******************************************************************************************
+
+				/*******************************************************************************************
 		 *  SET OUTPUT PIN
 		 * *****************************************************************************************/
 		else if(strncmp(uart.receive_buffer,PINA0_OUTPUT,(sizeof(PINA0_OUTPUT)/sizeof(char))-1) == 0){
@@ -563,6 +563,203 @@ void listen(){
 		}
 		else if(strncmp(uart.receive_buffer,PIND7_OUTPUT,(sizeof(PIND7_OUTPUT)/sizeof(char))-1) == 0){
 			gpio.set_output(DDRD,PIN7);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+
+		
+		/*******************************************************************************************
+		 *  SET PIN LOW
+		 * *****************************************************************************************/
+		else if(strncmp(uart.receive_buffer,PINA0_LOW,(sizeof(PINA0_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRA,PIN0);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PINA1_LOW,(sizeof(PINA1_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRA,PIN1);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PINA2_LOW,(sizeof(PINA2_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRA,PIN2);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PINA3_LOW,(sizeof(PINA3_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRA,PIN3);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PINA4_LOW,(sizeof(PINA4_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRA,PIN4);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PINA5_LOW,(sizeof(PINA5_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRA,PIN5);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PINA6_LOW,(sizeof(PINA6_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRA,PIN6);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PINA7_LOW,(sizeof(PINA7_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRA,PIN7);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PINB0_LOW,(sizeof(PINB0_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRB,PIN0);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PINB1_LOW,(sizeof(PINB1_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRB,PIN1);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PINB2_LOW,(sizeof(PINB2_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRB,PIN2);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PINB3_LOW,(sizeof(PINB3_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRB,PIN3);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PINB4_LOW,(sizeof(PINB4_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRB,PIN4);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PINB5_LOW,(sizeof(PINB5_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRB,PIN5);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PINB6_LOW,(sizeof(PINB6_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRB,PIN6);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PINB7_LOW,(sizeof(PINB7_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRB,PIN7);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PINC0_LOW,(sizeof(PINC0_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRC,PIN0);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PINC1_LOW,(sizeof(PINC1_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRC,PIN1);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PINC2_LOW,(sizeof(PINC2_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRA,PIN2);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PINC3_LOW,(sizeof(PINC3_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRC,PIN3);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PINC4_LOW,(sizeof(PINC4_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRC,PIN4);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PINC5_LOW,(sizeof(PINC5_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRC,PIN5);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PINC6_LOW,(sizeof(PINC6_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRC,PIN6);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PINC7_LOW,(sizeof(PINC7_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRC,PIN7);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PIND0_LOW,(sizeof(PIND0_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRD,PIN0);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PIND1_LOW,(sizeof(PIND1_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRD,PIN1);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PIND2_LOW,(sizeof(PIND2_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRD,PIN2);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PIND3_LOW,(sizeof(PIND3_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRD,PIN3);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PIND4_LOW,(sizeof(PIND4_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRD,PIN4);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PIND5_LOW,(sizeof(PIND5_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRD,PIN5);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PIND6_LOW,(sizeof(PIND6_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRD,PIN6);
+			uart.send_string(default_reply);
+			uart.send_char(new_line);
+			uart.flush_buffer();
+		}
+		else if(strncmp(uart.receive_buffer,PIND7_LOW,(sizeof(PIND7_LOW)/sizeof(char))-1) == 0){
+			gpio.set_low(DDRD,PIN7);
 			uart.send_string(default_reply);
 			uart.send_char(new_line);
 			uart.flush_buffer();
