@@ -3,6 +3,7 @@
 #define _COMMANDS_H
 
  const char new_line= '\n';
+ char default_reply[] = "OK";
 
 /********************************************
  * ADC COMMANDS
